@@ -1,0 +1,218 @@
+================================================================================
+               ELE430 Producer-Consumer System Model
+================================================================================
+
+--- System Information ---
+Username:              mahgoub
+Hostname:              Mahgoubs-MacBook-Air.local
+Execution Time:        Wednesday, February 04, 2026 at 02:31:55
+Process ID (PID):      73741
+
+--- Runtime Configuration ---
+Number of Producers:   5
+Number of Consumers:   3
+Queue Capacity:        10 entries
+Timeout Duration:      60 seconds
+
+--- Compiled Model Parameters ---
+Max Producer Wait:     2 seconds
+Max Consumer Wait:     4 seconds
+Random Value Range:    0 to 9
+Debug Mode:            DISABLED
+
+================================================================================
+Starting simulation at Wed Feb 04 02:31:55 2026
+================================================================================
+
+[INIT] Creating 5 producer thread(s)...
+[INIT] Producer P1 created (PID: 73741, TID: 6166310912)
+[INIT] Producer P2 created (PID: 73741, TID: 6166884352)
+[P1] Producer thread started
+[P1] WRITE -> seq=1, value=0, priority=0, queue_size=0
+[INIT] Producer P3 created (PID: 73741, TID: 6167457792)
+[P2] Producer thread started
+[P3] Producer thread started
+[P3] WRITE -> seq=1, value=3, priority=0, queue_size=1
+[INIT] Producer P4 created (PID: 73741, TID: 6168031232)
+[P4] Producer thread started
+[P4] WRITE -> seq=1, value=9, priority=9, queue_size=2
+[P2] WRITE -> seq=1, value=6, priority=5, queue_size=1
+[INIT] Producer P5 created (PID: 73741, TID: 6168604672)
+[INIT] Creating 3 consumer thread(s)...
+[P5] Producer thread started
+[P5] WRITE -> seq=1, value=4, priority=5, queue_size=4
+[INIT] Consumer C1 created (PID: 73741, TID: 6169178112)
+[C1] Consumer thread started
+[C1] READ  <- seq=1, value=9, priority=9, from P4, latency=0.000s, queue_size=4
+[INIT] Consumer C2 created (PID: 73741, TID: 6169751552)
+[C2] Consumer thread started
+[C2] READ  <- seq=1, value=6, priority=5, from P2, latency=0.000s, queue_size=3
+[INIT] Consumer C3 created (PID: 73741, TID: 6170324992)
+
+[RUNNING] All threads created. Model is now executing...
+[RUNNING] Press Ctrl+C to stop early, or wait for timeout.
+
+[C3] Consumer thread started
+[C3] READ  <- seq=1, value=4, priority=5, from P5, latency=0.000s, queue_size=2
+[P1] WRITE -> seq=2, value=0, priority=0, queue_size=2
+[P5] WRITE -> seq=2, value=7, priority=9, queue_size=3
+[C1] READ  <- seq=2, value=7, priority=9, from P5, latency=0.000s, queue_size=3
+[P3] WRITE -> seq=2, value=2, priority=0, queue_size=2
+[P5] WRITE -> seq=3, value=1, priority=0, queue_size=4
+[P4] WRITE -> seq=2, value=0, priority=0, queue_size=4
+[P2] WRITE -> seq=2, value=9, priority=9, queue_size=4
+[P3] WRITE -> seq=3, value=4, priority=5, queue_size=7
+[C1] READ  <- seq=2, value=9, priority=9, from P2, latency=1.005s, queue_size=7
+[P1] WRITE -> seq=3, value=6, priority=5, queue_size=6
+[C3] READ  <- seq=3, value=4, priority=5, from P3, latency=1.005s, queue_size=6
+[C2] READ  <- seq=3, value=6, priority=5, from P1, latency=1.005s, queue_size=6
+[P2] WRITE -> seq=3, value=1, priority=0, queue_size=6
+[P5] WRITE -> seq=4, value=9, priority=9, queue_size=7
+[P3] WRITE -> seq=4, value=1, priority=0, queue_size=6
+[P4] WRITE -> seq=3, value=8, priority=9, queue_size=6
+[P1] WRITE -> seq=4, value=8, priority=9, queue_size=10
+[P3] WRITE -> seq=5, value=5, priority=5, queue_size=10
+[P4] WRITE -> seq=4, value=9, priority=9, queue_size=10
+[P5] WRITE -> seq=5, value=8, priority=9, queue_size=10
+[P2] WRITE -> seq=4, value=8, priority=9, queue_size=10
+[P1] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=3, value=8, priority=9, from P4, latency=3.010s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=4, value=9, priority=9, from P5, latency=3.010s, queue_size=10
+[C1] READ  <- seq=4, value=8, priority=9, from P1, latency=2.010s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=5, value=3, priority=0, queue_size=10
+[C2] READ  <- seq=4, value=9, priority=9, from P4, latency=3.010s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P3] WRITE -> seq=6, value=0, priority=0, queue_size=10
+[C1] READ  <- seq=5, value=8, priority=9, from P5, latency=3.011s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=5, value=4, priority=5, queue_size=10
+[C2] READ  <- seq=4, value=8, priority=9, from P2, latency=4.012s, queue_size=10
+[P1] BLOCKED (queue was full, waited for space)
+[P5] WRITE -> seq=6, value=2, priority=0, queue_size=10
+[P2] WRITE -> seq=5, value=7, priority=9, queue_size=10
+[C3] READ  <- seq=5, value=5, priority=5, from P3, latency=6.021s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[C1] READ  <- seq=1, value=0, priority=0, from P1, latency=11.047s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=6, value=5, priority=5, queue_size=10
+[P3] WRITE -> seq=7, value=9, priority=9, queue_size=10
+[C1] READ  <- seq=5, value=4, priority=5, from P4, latency=4.015s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=6, value=6, priority=5, queue_size=10
+[C2] READ  <- seq=1, value=3, priority=0, from P3, latency=14.057s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[P5] WRITE -> seq=7, value=5, priority=5, queue_size=10
+[C1] READ  <- seq=5, value=7, priority=9, from P2, latency=4.018s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=6, value=5, priority=5, from P1, latency=2.010s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[P2] WRITE -> seq=6, value=0, priority=0, queue_size=10
+[P3] WRITE -> seq=8, value=1, priority=0, queue_size=10
+[P1] WRITE -> seq=7, value=1, priority=0, queue_size=10
+[P4] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=7, value=9, priority=9, from P3, latency=5.021s, queue_size=10
+[P5] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=6, value=6, priority=5, from P4, latency=4.016s, queue_size=9
+[P5] WRITE -> seq=8, value=7, priority=9, queue_size=10
+[C1] READ  <- seq=7, value=5, priority=5, from P5, latency=4.017s, queue_size=9
+[P4] WRITE -> seq=7, value=2, priority=0, queue_size=10
+[P2] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=2, value=0, priority=0, from P1, latency=17.072s, queue_size=8
+[P2] WRITE -> seq=7, value=6, priority=5, queue_size=10
+[P4] WRITE -> seq=8, value=4, priority=5, queue_size=10
+[C3] READ  <- seq=2, value=2, priority=0, from P3, latency=19.082s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=8, value=4, priority=5, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=2, value=0, priority=0, from P4, latency=19.082s, queue_size=9
+[C3] READ  <- seq=8, value=7, priority=9, from P5, latency=3.015s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[C1] READ  <- seq=3, value=1, priority=0, from P5, latency=20.084s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[P5] WRITE -> seq=9, value=6, priority=5, queue_size=10
+[C3] READ  <- seq=7, value=6, priority=5, from P2, latency=4.018s, queue_size=9
+[P2] WRITE -> seq=8, value=5, priority=5, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[P3] WRITE -> seq=9, value=0, priority=0, queue_size=10
+[C1] READ  <- seq=8, value=4, priority=5, from P4, latency=5.022s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=9, value=5, priority=5, queue_size=10
+[C2] READ  <- seq=8, value=4, priority=5, from P1, latency=4.017s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=9, value=6, priority=5, queue_size=10
+[P5] WRITE -> seq=10, value=7, priority=9, queue_size=10
+[C3] READ  <- seq=9, value=6, priority=5, from P5, latency=5.016s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[C1] READ  <- seq=8, value=5, priority=5, from P2, latency=4.017s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[P2] WRITE -> seq=9, value=3, priority=0, queue_size=10
+[C3] READ  <- seq=3, value=1, priority=0, from P2, latency=25.103s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=9, value=5, priority=5, from P4, latency=5.021s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[P3] WRITE -> seq=10, value=4, priority=5, queue_size=10
+[P1] WRITE -> seq=10, value=6, priority=5, queue_size=10
+[C1] READ  <- seq=9, value=6, priority=5, from P1, latency=5.017s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=10, value=0, priority=0, queue_size=10
+[C2] READ  <- seq=10, value=7, priority=9, from P5, latency=6.022s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=4, value=1, priority=0, from P3, latency=29.118s, queue_size=9
+[P5] WRITE -> seq=11, value=2, priority=0, queue_size=10
+[P3] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=10, value=4, priority=5, from P3, latency=5.018s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[P2] WRITE -> seq=10, value=8, priority=9, queue_size=10
+[C1] READ  <- seq=10, value=6, priority=5, from P1, latency=5.019s, queue_size=9
+[P3] WRITE -> seq=11, value=0, priority=0, queue_size=10
+[P4] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=5, value=3, priority=0, from P1, latency=28.118s, queue_size=9
+[P1] WRITE -> seq=11, value=5, priority=5, queue_size=9
+[C3] READ  <- seq=11, value=5, priority=5, from P1, latency=1.001s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=11, value=0, priority=0, queue_size=10
+[P1] WRITE -> seq=12, value=2, priority=0, queue_size=10
+[C2] READ  <- seq=10, value=8, priority=9, from P2, latency=4.013s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[P3] WRITE -> seq=12, value=5, priority=5, queue_size=10
+[C1] READ  <- seq=6, value=0, priority=0, from P3, latency=30.126s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P2] WRITE -> seq=11, value=0, priority=0, queue_size=10
+[C2] READ  <- seq=6, value=2, priority=0, from P5, latency=30.128s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[C3] READ  <- seq=7, value=2, priority=0, from P4, latency=23.088s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[C1] READ  <- seq=6, value=0, priority=0, from P2, latency=26.111s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[P5] WRITE -> seq=12, value=7, priority=9, queue_size=10
+[C2] READ  <- seq=12, value=5, priority=5, from P3, latency=2.013s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=13, value=3, priority=0, queue_size=10
+[C1] READ  <- seq=7, value=1, priority=0, from P1, latency=26.109s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=12, value=9, priority=9, queue_size=9
+[C2] READ  <- seq=12, value=7, priority=9, from P5, latency=1.008s, queue_size=9
+[P2] WRITE -> seq=12, value=4, priority=5, queue_size=9
+[P3] WRITE -> seq=13, value=8, priority=9, queue_size=10
+[P5] WRITE -> seq=13, value=7, priority=9, queue_size=10
+[P2] WRITE -> seq=13, value=8, priority=9, queue_size=10
+[C3] READ  <- seq=12, value=4, priority=5, from P2, latency=3.000s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=12, value=9, priority=9, from P4, latency=3.015s, queue_size=9
+[P1] BLOCKED (queue was full, waited for space)
+[P4] WRITE -> seq=13, value=3, priority=0, queue_size=10
+[C3] READ  <- seq=8, value=1, priority=0, from P3, latency=31.119s, queue_size=9
+[P3] BLOCKED (queue was full, waited for space)
+[C1] READ  <- seq=13, value=8, priority=9, from P3, latency=3.007s, queue_size=9
+[P5] BLOCKED (queue was full, waited for space)
+[P1] WRITE -> seq=14, value=0, priority=0, queue_size=10
+[C1] READ  <- seq=13, value=7, priority=9, from P5, latency=4.012s, queue_size=9
+[P2] BLOCKED (queue was full, waited for space)
+[C2] READ  <- seq=13, value=8, priority=9, from P2, latency=3.015s, queue_size=9
+[P4] BLOCKED (queue was full, waited for space)
+[P3] WRITE -> seq=14, value=3, priority=0, queue_size=10
+[P5] WRITE -> seq=14, value=1, priority=0, queue_size=10
+[P2] WRITE -> seq=14, value=9, priority=9, queue_size=10
+[P4] 
